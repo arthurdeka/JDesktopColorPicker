@@ -15,7 +15,7 @@ public class App {
     	
         System.out.println( "Hello World!" );
         
-        new PickColor();
+        new GUI();
         
         
     }
