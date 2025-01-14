@@ -2,6 +2,9 @@ package com.github.arthurdeka.JDesktopColorPicker;
 
 
 import javax.swing.JFrame;
+import javax.swing.UIManager;
+
+import com.formdev.flatlaf.FlatLightLaf;
 
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
@@ -13,6 +16,15 @@ public class GUI extends JFrame implements ActionListener {
 	JButton pickColorButton;
 	
 	GUI() {
+		
+		// import FlatLaf look and Feel
+		try {
+		    UIManager.setLookAndFeel( new FlatLightLaf() );
+		} catch( Exception ex ) {
+		    System.err.println( "Failed to initialize LaF" );
+		}
+
+		
 		this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		this.setTitle("JDesktopColorPicker");
 		this.setSize(250, 500);
