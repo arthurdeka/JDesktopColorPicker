@@ -1,5 +1,6 @@
 # this project
 src/main/resources/teste.png
+target/classes/teste.png
 
 # Compiled class file
 *.class
