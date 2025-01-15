@@ -36,7 +36,7 @@ public class GUI extends JFrame implements ActionListener {
 		this.setTitle("JDesktopColorPicker");
 		this.setSize(630, 250);
 		this.setLayout(null);
-		//this.setResizable(false);
+		this.setResizable(false);
 		
 		pickColorButton = new JButton("Pick Color");
 		pickColorButton.setBounds(450, 150, 150, 40);
