@@ -13,9 +13,8 @@ import java.awt.Robot;
 public class App {
     public static void main( String[] args ) throws AWTException {
     	
-        System.out.println( "Hello World!" );
         
-        new GUI();
+        new GUI(Color.white);
         
         
     }

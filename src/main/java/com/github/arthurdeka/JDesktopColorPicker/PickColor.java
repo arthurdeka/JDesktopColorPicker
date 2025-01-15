@@ -103,7 +103,7 @@ public class PickColor extends JFrame implements MouseListener {
 		
 		System.out.println("The color is: " + pixelColor);
 		this.dispose();
-		new GUI().setVisible(true);
+		new GUI(pixelColor).setVisible(true);
 	    
 	}
 

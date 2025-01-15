@@ -20,9 +20,11 @@ import javax.swing.JColorChooser;
 public class GUI extends JFrame implements ActionListener {
 	
 	JButton pickColorButton;
+	Color color;
 	
-	
-	GUI() {
+	GUI(Color color) {
+		
+		this.color = color;
 		
 		// import FlatLaf look and Feel
 		try {
@@ -64,11 +66,10 @@ public class GUI extends JFrame implements ActionListener {
             }
         }
 		chooser.setBounds(-20,-130,650,550);
-		
+		chooser.setColor(color);
 		
 		this.add(pickColorButton);
 		this.add(chooser);
-		//this.add(pickColorButton);
 		this.setVisible(true);
 	}
 
