@@ -35,7 +35,7 @@ public class PickColor extends JFrame implements MouseListener {
 		
 		// creates custom cursor for picking the color
 		setCursor(Toolkit.getDefaultToolkit().createCustomCursor(
-				new ImageIcon("src/main/resources/cursor.png").getImage(),
+				new ImageIcon(getClass().getResource("/cursor.png")).getImage(),
 				new Point(0,0),
 				"Custom cursor"));
 
