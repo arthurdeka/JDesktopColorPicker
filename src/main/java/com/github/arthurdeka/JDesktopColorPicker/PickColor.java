@@ -40,8 +40,8 @@ public class PickColor extends JFrame implements MouseListener {
 				"Custom cursor"));
 
 		
-		captureScreen("src/main/resources/teste.png");
-		ImageIcon image = new ImageIcon("src/main/resources/teste.png");
+		BufferedImage screenshot = captureScreen();
+		ImageIcon image = new ImageIcon(screenshot);
 
 		label = new JLabel();
 		label.setIcon(image);
@@ -54,24 +54,17 @@ public class PickColor extends JFrame implements MouseListener {
 	 * This method takes an screenshot of the user's screen
 	 * 
 	 * @param fileName Name of the file (screenshot) to be saved. 
+	 * @return 
 	 */
-	public void captureScreen(String fileName) {
+	public BufferedImage captureScreen() {
 		Dimension screenSize = Toolkit.getDefaultToolkit().getScreenSize();
 		Rectangle screenRectangle = new Rectangle(screenSize);
-		Robot robot = null;
-		try {
-			robot = new Robot();
-		} catch (AWTException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
-		BufferedImage image = robot.createScreenCapture(screenRectangle);
-		try {
-			ImageIO.write(image, "png", new File(fileName));
-		} catch (IOException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
+	    try {
+	        return new Robot().createScreenCapture(screenRectangle);
+	    } catch (AWTException e) {
+	        e.printStackTrace();
+	        return null;
+	    }
    
 	}
 	
